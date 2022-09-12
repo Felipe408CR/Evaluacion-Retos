@@ -4,29 +4,29 @@ import java.util.Scanner;
 
 public class Biblioteca {
 
-    private String nombreLibro;
-    private String codigo;
-    private int numeroPaginas;
-    private int numeroEjemplares;
-    private String autor;
+   private String nombre;
+   private String codigo;
+   private int numeroPagina;
+   private int numeroEjemplares;
+   private String autor;
 
     public Biblioteca() {
     }
 
-    public Biblioteca(String nombreLibro, String codigo, int numeroPaginas, int numeroEjemplares, String autor) {
-        this.nombreLibro = nombreLibro;
+    public Biblioteca(String nombre, String codigo, int numeroPagina, int numeroEjemplares, String autor) {
+        this.nombre = nombre;
         this.codigo = codigo;
-        this.numeroPaginas = numeroPaginas;
+        this.numeroPagina = numeroPagina;
         this.numeroEjemplares = numeroEjemplares;
         this.autor = autor;
     }
 
-    public String getNombreLibro() {
-        return nombreLibro;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNombreLibro(String nombreLibro) {
-        this.nombreLibro = nombreLibro;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getCodigo() {
@@ -37,12 +37,12 @@ public class Biblioteca {
         this.codigo = codigo;
     }
 
-    public int getNumeroPaginas() {
-        return numeroPaginas;
+    public int getNumeroPagina() {
+        return numeroPagina;
     }
 
-    public void setNumeroPaginas(int numeroPaginas) {
-        this.numeroPaginas = numeroPaginas;
+    public void setNumeroPagina(int numeroPagina) {
+        this.numeroPagina = numeroPagina;
     }
 
     public int getNumeroEjemplares() {
@@ -59,30 +59,6 @@ public class Biblioteca {
 
     public void setAutor(String autor) {
         this.autor = autor;
-    }
-
-    public int ingresar(){
-
-        Scanner leaTeclado= new Scanner(System.in);
-
-        System.out.println("Ingrese nombre del libro: ");
-        this.nombreLibro=leaTeclado.nextLine();
-
-        System.out.println("Ingresar codigo del libro: ");
-        this.codigo=leaTeclado.nextLine();
-
-        System.out.println("Ingrese el numero de paginas: ");
-        this.numeroPaginas=leaTeclado.nextInt();
-
-
-        System.out.println("Ingrese el numero de ejemplares: ");
-        this.numeroEjemplares=leaTeclado.nextInt();
-
-        System.out.println("Ingrese el autor: ");
-        this.autor=leaTeclado.next();
-
-        return 0;
-
     }
 
 

@@ -11,7 +11,7 @@ public class Main {
 
         // Punto 1
 
-        /*System.out.println("Punto 1");
+        System.out.println("Punto 1");
 
         Empleado empleado= new Empleado();
         empleado.setSalario(3500000);
@@ -53,54 +53,41 @@ public class Main {
 
         double total = carrefour.calcularProducto();
 
-        System.out.println("El precio total de la compra es: " + total);*/
+        System.out.println("El precio total de la compra es: " + total);
 
         // Punto 3
 
         System.out.println("Punto 3");
 
-        Biblioteca alejandria= new Biblioteca();
+        // Crear un objeto para escribir por teclado
 
-        Scanner lea= new Scanner(System.in);
+        Scanner entradaTeclado= new Scanner(System.in);
 
-        int observador = 100;
+        // Crear un objeto de tipo libro
 
-        System.out.println("*****MENU*****");
-        System.out.println("1. Ingresar libro");
-        System.out.println("2. Consultar libro");
-        System.out.println("3. Modificar ejemplar de un libro");
-        System.out.println("4. Salir");
+        Biblioteca biblioteca = new Biblioteca();
 
-            while (observador!=4){
+        // Agregar una cantidad de libros
 
-                System.out.println("Digite una opcion: ");
-                observador=lea.nextInt();
+        System.out.println("Digite el nombre del libro: ");
+        biblioteca.setNombre(entradaTeclado.nextLine());
+        System.out.println(biblioteca.getNombre());
 
-                if (observador==1){
+        System.out.println("Digite el codigo del libro: ");
+        biblioteca.setCodigo(entradaTeclado.nextLine());
+        System.out.println(biblioteca.getCodigo());
 
-                    alejandria.ingresar();
+        System.out.println("Digite el nombre del autor: ");
+        biblioteca.setAutor(entradaTeclado.nextLine());
+        System.out.println(biblioteca.getAutor());
 
-                }else if (observador==2){
+        System.out.println("Digite el numero de ejemplares: ");
+        biblioteca.setNumeroEjemplares(entradaTeclado.nextInt());
+        System.out.println(biblioteca.getNumeroEjemplares());
 
-
-
-                }else if (observador==3){
-
-
-
-                }else if (observador==4){
-
-                    System.out.println("Salir");
-                    break;
-
-                }else{
-
-                    System.out.println("Opcion invalida");
-
-                }
-
-
-            }
+        System.out.println("Digite un nuevo numero de ejemplares: ");
+        biblioteca.setNumeroEjemplares(entradaTeclado.nextInt());
+        System.out.println(biblioteca.getNumeroEjemplares());
 
     }
 }
